@@ -7,7 +7,7 @@ import { postsScreenViewStyles } from '@screens/postsScreen/styles.ts';
 export const PostsScreenView: FC<PostsScreenViewProps> = (props) => {
   const { navigationToPostScreen, setTitle, setBody, addPost, post } = props;
   return (
-    <View>
+    <View style={postsScreenViewStyles.rootContainer}>
       <View style={postsScreenViewStyles.createPostContainer}>
         <View style={postsScreenViewStyles.textInputContainer}>
           <TextInput style={postsScreenViewStyles.textInput} onChangeText={setTitle} />
