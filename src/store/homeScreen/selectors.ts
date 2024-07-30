@@ -2,4 +2,7 @@ import { NameSpace, RootState } from '../root-reducer';
 
 export const getIsActive = (state: RootState): boolean => state[NameSpace.homeScreen].isActive;
 export const getLoadData = (state: RootState) => state[NameSpace.homeScreen].itemData;
-export const getUrl = (state: RootState) => state[NameSpace.homeScreen].url;
+export const getTitle = (state: RootState) => state[NameSpace.homeScreen].title;
+export const getBody = (state: RootState) => state[NameSpace.homeScreen].body;
+export const getId = (state: RootState) => state[NameSpace.homeScreen].id;
+export const getPostsData = (state: RootState) => state[NameSpace.homeScreen].setPost;

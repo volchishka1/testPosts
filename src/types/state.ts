@@ -1,5 +1,14 @@
 export type HomeScreen = {
   isActive: boolean;
-  url: string;
+  title: string;
+  body: string;
+  id: number;
   itemData: [];
+  setPost: [
+    {
+      id: number;
+      title: string;
+      body: string;
+    },
+  ];
 };
