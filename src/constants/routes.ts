@@ -1,0 +1,4 @@
+export enum ROUTES {
+  POST_SCREEN = 'POST_SCREEN',
+  POSTS_SCREEN = 'POSTS_SCREEN',
+}
