@@ -1,6 +1,7 @@
 import { StyleSheet, ViewStyle } from 'react-native';
 
 export type PostsScreenStyles = {
+  rootContainer: ViewStyle;
   createPostContainer: ViewStyle;
   textInputContainer: ViewStyle;
   textInput: ViewStyle;
@@ -9,6 +10,9 @@ export type PostsScreenStyles = {
 };
 
 export const postsScreenViewStyles = StyleSheet.create<PostsScreenStyles>({
+  rootContainer: {
+    alignItems: 'center',
+  },
   createPostContainer: {
     borderRadius: 10,
     alignItems: 'center',
@@ -29,11 +33,15 @@ export const postsScreenViewStyles = StyleSheet.create<PostsScreenStyles>({
     marginBottom: 2,
   },
   postsContainer: {
-    borderRadius: 10,
-    backgroundColor: '#e5c5f8',
+    width: '95%',
+    marginBottom: 150,
   },
   postContainer: {
     alignItems: 'flex-start',
-    height: 40,
+    justifyContent: 'center',
+    height: 50,
+    marginVertical: 5,
+    backgroundColor: '#e5c5f8',
+    borderRadius: 5,
   },
 });
