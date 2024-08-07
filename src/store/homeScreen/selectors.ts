@@ -5,4 +5,5 @@ export const getLoadData = (state: RootState) => state[NameSpace.homeScreen].ite
 export const getTitle = (state: RootState) => state[NameSpace.homeScreen].title;
 export const getBody = (state: RootState) => state[NameSpace.homeScreen].body;
 export const getId = (state: RootState) => state[NameSpace.homeScreen].id;
-export const getPostsData = (state: RootState) => state[NameSpace.homeScreen].setPost;
+export const getPostTitle = (state: RootState) => state[NameSpace.homeScreen].postTitle;
+export const getPostBody = (state: RootState) => state[NameSpace.homeScreen].postBody;

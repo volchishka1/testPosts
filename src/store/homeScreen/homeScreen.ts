@@ -1,21 +1,24 @@
 import { createReducer } from '@reduxjs/toolkit';
 
 import { HomeScreen } from '../../types/state';
-import { addIsActive, saveData, setBody, setId, setPostData, setTitle } from '../actions';
+import {
+  addIsActive,
+  saveData,
+  setBody,
+  setId,
+  setPostBody,
+  setPostTitle,
+  setTitle,
+} from '../actions';
 
 const initialState: HomeScreen = {
   isActive: false,
   title: '',
   body: '',
+  postTitle: '',
+  postBody: '',
   id: 0,
   itemData: [],
-  setPost: [
-    {
-      id: 0,
-      title: '',
-      body: '',
-    },
-  ],
 };
 
 export const homeScreen = createReducer(initialState, (builder) => {
@@ -24,7 +27,8 @@ export const homeScreen = createReducer(initialState, (builder) => {
       state.isActive = action.payload;
     })
     .addCase(saveData, (state, action) => {
-      state.itemData = action.payload;
+      state.itemData.push(action.payload);
+      // state.itemData = action.payload;
     })
     .addCase(setTitle, (state, action) => {
       state.title = action.payload;
@@ -35,7 +39,10 @@ export const homeScreen = createReducer(initialState, (builder) => {
     .addCase(setId, (state, action) => {
       state.id = action.payload;
     })
-    .addCase(setPostData, (state, action) => {
-      state.setPost.push(action.payload);
+    .addCase(setPostTitle, (state, action) => {
+      state.postTitle = action.payload;
+    })
+    .addCase(setPostBody, (state, action) => {
+      state.postBody = action.payload;
     });
 });

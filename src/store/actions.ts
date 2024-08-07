@@ -1,7 +1,6 @@
 import { createAction } from '@reduxjs/toolkit';
 
 import { ActionType } from '../types/action';
-import { PostsData } from '@root/types/entityModel.ts';
 
 export const addIsActive = createAction(ActionType.ChangeActive, (isActive: boolean) => ({
   payload: isActive,
@@ -23,6 +22,10 @@ export const setId = createAction(ActionType.SetId, (SetId: number) => ({
   payload: SetId,
 }));
 
-export const setPostData = createAction(ActionType.SetPost, (SetPostData: PostsData) => ({
-  payload: SetPostData,
+export const setPostTitle = createAction(ActionType.SetPostTitle, (SetPostTitle: string) => ({
+  payload: SetPostTitle,
+}));
+
+export const setPostBody = createAction(ActionType.SetPostBody, (SetPostBody: string) => ({
+  payload: SetPostBody,
 }));

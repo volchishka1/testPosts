@@ -11,6 +11,8 @@ export enum ActionType {
   SetBody = 'user/SetBody',
   SetPost = 'user/SetPost',
   SetId = 'user/SetId',
+  SetPostTitle = 'user/SetPostTitle',
+  SetPostBody = 'user/SetPostBody',
 }
 
 export type ThunkActionResult<R = Promise<void | boolean>> = ThunkAction<
