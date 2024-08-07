@@ -1,9 +1,10 @@
 import { TextInputProps, TouchableOpacityProps } from 'react-native';
+import { ItemData } from '@screens/postsScreen/index.tsx';
 
 export type PostsScreenViewProps = {
-  navigationToPostScreen: TouchableOpacityProps['onPress'];
+  setPostData: (title: string, body: string) => void;
   addPost: TouchableOpacityProps['onPress'];
   setTitle: TextInputProps['onChangeText'];
   setBody: TextInputProps['onChangeText'];
-  post: TextInputProps['children'];
+  post: Array<ItemData>;
 };
